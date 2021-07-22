@@ -5,6 +5,10 @@ pem生成、加密、解密
 
 ```
 func main() {
+	
+	//公钥私钥生成
+	ccrsa.RSAGenKey(2048)	
+
 	//RSA加密
 	data, err := ccrsa.RsaEncrypt([]byte("12345"), "publicKey.pem")
 	if err != nil {
